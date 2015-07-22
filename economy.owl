@@ -1,0 +1,258 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY Test_economy "http://datos.gob.mx/Test_economy.owl#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://datos.gob.mx/Test_economy.owl#"
+     xml:base="http://datos.gob.mx/Test_economy.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:Test_economy="http://datos.gob.mx/Test_economy.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="">
+        <rdfs:comment
+            >Cuenta P&#250;blica
+Documento por medio del cual la Federaci&#243;n rinde cuentas sobre el origen, uso y destino de los recursos p&#250;blicos del a&#241;o previo; incluye informaci&#243;n contable, presupuestaria y program&#225;tica de los tres Poderes de la Uni&#243;n y de los &#243;rganos constitucionalmente aut&#243;nomos.
+Catalogo de Cuenta P&#250;blica: (2008, 2009, 2010, 2011, 2012 y 2013)</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://datos.gob.mx/Test_economy.owl#contiene -->
+
+    <owl:ObjectProperty rdf:about="#contiene">
+        <rdfs:range rdf:resource="#Gastos"/>
+        <rdfs:domain rdf:resource="#Programa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://datos.gob.mx/Test_economy.owl#cumple -->
+
+    <owl:ObjectProperty rdf:about="#cumple">
+        <rdfs:range rdf:resource="#Finalidad"/>
+        <rdfs:range rdf:resource="#Funcion"/>
+        <rdfs:domain rdf:resource="#Ramo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://datos.gob.mx/Test_economy.owl#desarrolla -->
+
+    <owl:ObjectProperty rdf:about="#desarrolla">
+        <rdfs:range rdf:resource="#Actividad"/>
+        <rdfs:domain rdf:resource="#Finalidad"/>
+        <rdfs:domain rdf:resource="#Funcion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://datos.gob.mx/Test_economy.owl#genera -->
+
+    <owl:ObjectProperty rdf:about="#genera">
+        <rdfs:domain rdf:resource="#Actividad"/>
+        <rdfs:range rdf:resource="#Gastos"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://datos.gob.mx/Test_economy.owl#proviene -->
+
+    <owl:ObjectProperty rdf:about="#proviene">
+        <rdfs:range rdf:resource="#FuenteFinanciamiento"/>
+        <rdfs:domain rdf:resource="#Gastos"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://datos.gob.mx/Test_economy.owl#vigila -->
+
+    <owl:ObjectProperty rdf:about="#vigila">
+        <rdfs:range rdf:resource="#Finalidad"/>
+        <rdfs:range rdf:resource="#Funcion"/>
+        <rdfs:domain rdf:resource="#Unidad"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://datos.gob.mx/Test_economy.owl#aprobado -->
+
+    <owl:DatatypeProperty rdf:about="#aprobado">
+        <rdfs:domain rdf:resource="#Gastos"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://datos.gob.mx/Test_economy.owl#ciclo -->
+
+    <owl:DatatypeProperty rdf:about="#ciclo">
+        <rdfs:domain rdf:resource="#Gastos"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://datos.gob.mx/Test_economy.owl#devengado -->
+
+    <owl:DatatypeProperty rdf:about="#devengado">
+        <rdfs:domain rdf:resource="#Gastos"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://datos.gob.mx/Test_economy.owl#ejercido -->
+
+    <owl:DatatypeProperty rdf:about="#ejercido">
+        <rdfs:domain rdf:resource="#Gastos"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://datos.gob.mx/Test_economy.owl#objeto -->
+
+    <owl:DatatypeProperty rdf:about="#objeto">
+        <rdfs:domain rdf:resource="#Gastos"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://datos.gob.mx/Test_economy.owl#pagado -->
+
+    <owl:DatatypeProperty rdf:about="#pagado">
+        <rdfs:domain rdf:resource="#Gastos"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://datos.gob.mx/Test_economy.owl#tipo -->
+
+    <owl:DatatypeProperty rdf:about="#tipo">
+        <rdfs:domain rdf:resource="#Gastos"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://datos.gob.mx/Test_economy.owl#Actividad -->
+
+    <owl:Class rdf:about="#Actividad"/>
+    
+
+
+    <!-- http://datos.gob.mx/Test_economy.owl#Finalidad -->
+
+    <owl:Class rdf:about="#Finalidad"/>
+    
+
+
+    <!-- http://datos.gob.mx/Test_economy.owl#FuenteFinanciamiento -->
+
+    <owl:Class rdf:about="#FuenteFinanciamiento"/>
+    
+
+
+    <!-- http://datos.gob.mx/Test_economy.owl#Funcion -->
+
+    <owl:Class rdf:about="#Funcion"/>
+    
+
+
+    <!-- http://datos.gob.mx/Test_economy.owl#Gastos -->
+
+    <owl:Class rdf:about="#Gastos"/>
+    
+
+
+    <!-- http://datos.gob.mx/Test_economy.owl#Modalidad -->
+
+    <owl:Class rdf:about="#Modalidad">
+        <rdfs:subClassOf rdf:resource="#Programa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://datos.gob.mx/Test_economy.owl#Presupuesto -->
+
+    <owl:Class rdf:about="#Presupuesto">
+        <rdfs:subClassOf rdf:resource="#Modalidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://datos.gob.mx/Test_economy.owl#Programa -->
+
+    <owl:Class rdf:about="#Programa"/>
+    
+
+
+    <!-- http://datos.gob.mx/Test_economy.owl#Ramo -->
+
+    <owl:Class rdf:about="#Ramo"/>
+    
+
+
+    <!-- http://datos.gob.mx/Test_economy.owl#Subfuncion -->
+
+    <owl:Class rdf:about="#Subfuncion">
+        <rdfs:subClassOf rdf:resource="#Funcion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://datos.gob.mx/Test_economy.owl#Unidad -->
+
+    <owl:Class rdf:about="#Unidad"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+
