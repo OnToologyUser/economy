@@ -1,0 +1,19 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "Test_economy:Ramo" "Test_economy:Programa" "Test_economy:Finalidad" "Test_economy:Actividad" "Test_economy:FuenteFinanciamiento" "Test_economy:Gastos" "Test_economy:Unidad" ; /*classes style*/
+	"Test_economy:Finalidad" -> "Test_economy:Actividad" [ label = "Test_economy:desarrolla" ];
+	"Test_economy:Ramo" -> "Test_economy:Finalidad" [ label = "Test_economy:cumple" ];
+	"Test_economy:Gastos" -> "xsd:int" [ label = "Test_economy:ejercido" ];
+	"Test_economy:Gastos" -> "xsd:string" [ label = "Test_economy:objeto" ];
+	"Test_economy:Gastos" -> "xsd:int" [ label = "Test_economy:devengado" ];
+	"Test_economy:Gastos" -> "xsd:date" [ label = "Test_economy:ciclo" ];
+	"Test_economy:Gastos" -> "Test_economy:FuenteFinanciamiento" [ label = "Test_economy:proviene" ];
+	"Test_economy:Unidad" -> "Test_economy:Finalidad" [ label = "Test_economy:vigila" ];
+	"Test_economy:Gastos" -> "xsd:string" [ label = "Test_economy:tipo" ];
+	"Test_economy:Actividad" -> "Test_economy:Gastos" [ label = "Test_economy:genera" ];
+	"Test_economy:Gastos" -> "xsd:int" [ label = "Test_economy:pagado" ];
+	"Test_economy:Gastos" -> "xsd:int" [ label = "Test_economy:aprobado" ];
+	"Test_economy:Programa" -> "Test_economy:Gastos" [ label = "Test_economy:contiene" ];
+
+}

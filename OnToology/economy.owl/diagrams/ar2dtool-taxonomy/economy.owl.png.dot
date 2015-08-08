@@ -1,0 +1,9 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "Test_economy:Funcion" "Test_economy:Subfuncion" "Test_economy:Programa" "Test_economy:Presupuesto" "Test_economy:Modalidad" ; /*classes style*/
+	"Test_economy:Subfuncion" -> "Test_economy:Funcion" [ label = "rdfs:subClassOf" ];
+	"Test_economy:Modalidad" -> "Test_economy:Programa" [ label = "rdfs:subClassOf" ];
+	"Test_economy:Presupuesto" -> "Test_economy:Modalidad" [ label = "rdfs:subClassOf" ];
+
+}
